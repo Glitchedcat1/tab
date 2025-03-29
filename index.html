@@ -41,12 +41,12 @@
             // Create a favicon link element in the new tab's head section
             const faviconLink = newTab.document.createElement('link');
             faviconLink.rel = 'icon';
-            faviconLink.href = location.origin + '/favicon.png'; // Use the full URL path to ensure the favicon loads
+            faviconLink.href = location.origin + 'favicon.png'; // Use the full URL path to ensure the favicon loads
             newTab.document.head.appendChild(faviconLink);
 
             // Add content to the new tab
             const iframe = newTab.document.createElement('iframe');
-            iframe.src = 'https://example.com'; // Replace with the website URL you want to embed
+            iframe.src = 'https://you.com'; // Replace with the website URL you want to embed
             iframe.style.width = '100%';
             iframe.style.height = '100vh';
             iframe.style.border = 'none';
