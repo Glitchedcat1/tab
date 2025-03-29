@@ -8,37 +8,45 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            border: none;
+
+        img {
             cursor: pointer;
-            font-size: 20px;
+            width: 100px; /* Adjust the size of the favicon button */
+            height: 100px;
         }
-        button:hover {
-            background-color: #45a049;
+
+        img:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
-    <button onclick="openTab()">Click Me</button>
+    <img src="favicon.png" alt="Favicon Button" onclick="openTab()">
 
     <script>
         function openTab() {
+            // Open a blank page in a new tab
             const newTab = window.open('about:blank', '_blank');
+            
+            // Set the title of the new tab
             newTab.document.title = "Lexa C0re 5";
+
+            // Create a favicon link element in the new tab's head section
             const faviconLink = newTab.document.createElement('link');
             faviconLink.rel = 'icon';
-            faviconLink.href = 'favicon.png';
+            faviconLink.href = 'favicon.png'; // Ensure this path is correct
             newTab.document.head.appendChild(faviconLink);
-            
-            // Embed the site of your choice
+
+            // Add content to the new tab
             const iframe = newTab.document.createElement('iframe');
-            iframe.src = 'https://you.com';  // Replace with the website URL you want to embed
+            iframe.src = 'https://you.com'; // Replace with the website URL you want to embed
             iframe.style.width = '100%';
             iframe.style.height = '100vh';
             iframe.style.border = 'none';
@@ -47,4 +55,5 @@
     </script>
 </body>
 </html>
+
 
