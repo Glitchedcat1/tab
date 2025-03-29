@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lexia Core 5</title>
-  <link rel="icon" href="favicon.png" />
-  <style>
-    /* Simple button styling */
-    #faviconButton {
-      width: 50px;
-      height: 50px;
-      background: url('favicon.png') no-repeat center center;
-      background-size: cover;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexa C0re 5</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <button id="faviconButton"></button>
+    <button onclick="openTab()">Click Me</button>
 
-  <script>
-    // When the button is clicked, open a new tab with "about:blank"
-    document.getElementById('faviconButton').addEventListener('click', function() {
-      const newTab = window.open('about:blank', '_blank');
-
-      // Set the title of the new tab
-      newTab.document.title = 'Lexia Core 5';
-
-      // Add the favicon to the new tab
-      const link = newTab.document.createElement('link');
-      link.rel = 'icon';
-      link.href = 'favicon.png'; // Favicon path for the new tab
-      newTab.document.head.appendChild(link);
-
-      // Create an iframe to embed any website (example: https://example.com)
-      const iframe = newTab.document.createElement('iframe');
-      iframe.style.width = '100%';
-      iframe.style.height = '100vh'; // Take up full viewport height
-      iframe.src = 'https://you.com'; // You can change this to any website you want to embed
-      newTab.document.body.appendChild(iframe);
-    });
-  </script>
+    <script>
+        function openTab() {
+            const newTab = window.open('about:blank', '_blank');
+            newTab.document.title = "Lexa C0re 5";
+            const faviconLink = newTab.document.createElement('link');
+            faviconLink.rel = 'icon';
+            faviconLink.href = 'favicon.png';
+            newTab.document.head.appendChild(faviconLink);
+            
+            // Embed the site of your choice
+            const iframe = newTab.document.createElement('iframe');
+            iframe.src = 'https://you.com';  // Replace with the website URL you want to embed
+            iframe.style.width = '100%';
+            iframe.style.height = '100vh';
+            iframe.style.border = 'none';
+            newTab.document.body.appendChild(iframe);
+        }
+    </script>
 </body>
 </html>
 
