@@ -3,57 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lexa C0re 5</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
-        img {
-            cursor: pointer;
-            width: 100px; /* Adjust the size of the favicon button */
-            height: 100px;
-        }
-
-        img:hover {
-            opacity: 0.8;
-        }
-    </style>
+    <title>Change Favicon</title>
+    <link id="favicon" rel="icon" href="favicon.png" type="image/png"> <!-- Favicon in the root -->
 </head>
 <body>
-    <img src="favicon.png" alt="Favicon Button" onclick="openTab()">
+    <button id="changeFaviconBtn">Click to change favicon and open new tab</button>
 
-    <script>
-        function openTab() {
-            // Open a blank page in a new tab
-            const newTab = window.open('about:blank', '_blank');
-            
-            // Set the title of the new tab
-            newTab.document.title = "Lexa C0re 5";
-
-            // Create a favicon link element in the new tab's head section
-            const faviconLink = newTab.document.createElement('link');
-            faviconLink.rel = 'icon';
-            faviconLink.href = location.origin + 'favicon.png'; // Use the full URL path to ensure the favicon loads
-            newTab.document.head.appendChild(faviconLink);
-
-            // Add content to the new tab
-            const iframe = newTab.document.createElement('iframe');
-            iframe.src = 'https://you.com'; // Replace with the website URL you want to embed
-            iframe.style.width = '100%';
-            iframe.style.height = '100vh';
-            iframe.style.border = 'none';
-            newTab.document.body.appendChild(iframe);
-        }
-    </script>
+    <script src="script.js"></script> <!-- Ensure the script.js is also in the root directory -->
 </body>
 </html>
-
-
