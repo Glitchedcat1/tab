@@ -1,6 +1,6 @@
 document.getElementById('changeFaviconBtn').addEventListener('click', function() {
     // Get the current favicon URL from the current page
-    let faviconUrl = document.getElementById('favicon').href;
+    let faviconUrl = document.getElementById('favicon.png').href;
 
     // Open a new blank tab (about:blank)
     let newTab = window.open('about:blank', '_blank');
