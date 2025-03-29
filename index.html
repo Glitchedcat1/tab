@@ -7,8 +7,11 @@
     <link id="favicon" rel="icon" href="favicon.png" type="image/png"> <!-- Favicon in the root -->
 </head>
 <body>
-    <button id="changeFaviconBtn">Click to change favicon and open new tab</button>
+    <!-- The button is now an image of the favicon -->
+    <button id="changeFaviconBtn" style="background: none; border: none; padding: 0;">
+        <img src="favicon.png" alt="Change Favicon" width="32" height="32"> <!-- Using favicon.png as button -->
+    </button>
 
-    <script src="script.js"></script> <!-- Ensure the script.js is also in the root directory -->
+    <script src="script.js"></script> <!-- External JS file -->
 </body>
 </html>
